@@ -88,7 +88,7 @@ def load_db(embeddings, path):
     return vectorstore
 
 if not os.path.exists('faiss_index'):
-    vectorstore=load_db(embeddings,'2102.09427v2.pdf')
+    vectorstore=load_db(embeddings,'TranshumanistValues.pdf')
     vectorstore.save_local("faiss_index")
 else:
     vectorstore = FAISS.load_local("faiss_index",embeddings=embeddings,allow_dangerous_deserialization=True)
@@ -186,7 +186,7 @@ app = workflow.compile(checkpointer=memory)
 config = {"configurable": {"user_id": "1", "thread_id": "1"}}
 text_contents = "Tu chat:"
 save_chat = ""
-st.header('Chatbot CADI ')
+st.header('Chatbot H1071 ')
 st.write(bot_template.replace("{{MSG}}", "Hola, estoy aquí para ayudarte, ¿Cómo te llamas?"), unsafe_allow_html=True)
 question = st.chat_input("Escribe la pregunta y tu respuesta")
 if question:
