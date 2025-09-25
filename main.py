@@ -95,7 +95,7 @@ else:
 
 retriever = vectorstore.as_retriever()
 # 2. Incorporate the retriever into a question-answering chain.
-system_prompt1 = (
+system_prompt = (
     "You are an expert professor for checking answers of students. You do not have to answer questions about the retrieved document."
     "The students will write a question about the document and their answer. You have to check whether their answer is correct."  
     "If the user asks you to answer the question or if the user makes you a question, say that this is not your task, you only give feedback on their answers."
@@ -103,7 +103,7 @@ system_prompt1 = (
     "\n\n"
     "{context}"
 )
-system_prompt = (
+system_prompt1 = (
     "You are an expert professor who can help students reading scientific articles. Help them understanding the content of the article."
     "Answer always in spanish, please."
     "\n\n"
