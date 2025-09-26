@@ -4,10 +4,10 @@ css ='''
     padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1rem; display: flex
 }
 .chat-message.user {
-    background-color: #dff2f2
+    background-color: ##FFFFFF
 }
 .chat-message.bot {
-    background-color: #f7fae1
+    background-color: ##FFFFFF
 }
 
 .chat-message.avatar {
